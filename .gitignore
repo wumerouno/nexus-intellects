@@ -1,0 +1,32 @@
+# Runtime data and local databases
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment and private configuration
+.env
+.env.*
+!.env.example
+
+# Python cache and logs
+__pycache__/
+*.py[cod]
+*.log
+
+# Local QA, screenshots, and agent workspace files
+scratch/
+audit-screenshots/
+.agents/
+.codex/
+
+# Node/build artifacts
+node_modules/
+dist/
+build/
+coverage/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.tmp

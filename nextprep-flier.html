@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NextPrep Academy — Future Builders Bootcamp Event Flyer (1080x1080) — Nexus Intellect Limited</title>
+<meta name="description" content="Customize, download, or print the square (1080x1080) social media flyer for NextPrep Academy's Future Builders Holiday Bootcamp (Ages 13-17)." />
+<link rel="canonical" href="https://nexusintellects.com/nextprep-flier.html" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- html2canvas for exporting to PNG -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<!-- QRious for client-side local canvas QR generation (fixes CORS issues) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+<style>
+  :root {
+    --purple-900: #2d0530;
+    --purple-800: #3d0a40;
+    --purple-700: #4a0e4e;
+    --purple-600: #5e1466;
+    --purple-500: #7a1f86;
+    --magenta: #ec0e6f;
+    --magenta-light: #ff4d94;
+    --ink: #1d0c20;
+    --grey: #6b5d6e;
+    --cloud: #faf6fb;
+    --cloud-2: #f3ebf5;
+    --white: #ffffff;
+    --line: #ecdcef;
+    --radius: 18px;
+    --shadow-sm: 0 4px 18px rgba(61,10,64,.08);
+    --shadow-md: 0 14px 40px rgba(61,10,64,.14);
+    --shadow-lg: 0 30px 70px rgba(61,10,64,.22);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: #0f0711;
+    line-height: 1.45;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  header.nav {
+    background: rgba(45, 5, 48, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+  }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo-img { height: 44px; border-radius: 9px; }
+  .brandmark { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--white); letter-spacing: 0.04em; }
+  .sub-solo { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.92rem; color: var(--white); }
+  .back-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .back-link:hover { color: var(--white); }
+
+  /* Workspace Layout */
+  .workspace {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    flex: 1;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px;
+    gap: 32px;
+    align-items: start;
+  }
+
+  /* Sidebar Controls */
+  .sidebar {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius);
+    padding: 24px;
+    color: var(--white);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 94px;
+  }
+  .sidebar h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    color: var(--magenta-light);
+  }
+  .control-group {
+    margin-bottom: 20px;
+  }
+  .control-label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+  }
+
+  /* Presets Theme Selection */
+  .theme-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .theme-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
+    color: var(--white);
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+  }
+  .theme-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  .theme-btn.active {
+    background: rgba(236, 14, 111, 0.15);
+    border-color: var(--magenta);
+    box-shadow: 0 0 10px rgba(236, 14, 111, 0.25);
+  }
+  .theme-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .dot-obsidian { background: linear-gradient(135deg, #2d0530, #ec0e6f); }
+  .dot-violet { background: linear-gradient(135deg, #1d0f50, #7a1f86); }
+  .dot-sunset { background: linear-gradient(135deg, #ec0e6f, #ff9e43); }
+  .dot-mint { background: linear-gradient(135deg, #0b3c2c, #0cd18b); }
+  .dot-print { background: #f3ebf5; border: 1px solid #aaa; }
+
+  /* Toggles styling */
+  .toggle-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+    cursor: pointer;
+  }
+  .toggle-item span {
+    font-size: 0.9rem;
+  }
+  /* Switch UI */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+  }
+  .switch input { opacity: 0; width: 0; height: 0; }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(255,255,255,0.2);
+    transition: .3s;
+    border-radius: 22px;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px; width: 14px;
+    left: 4px; bottom: 4px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+  }
+  input:checked + .slider { background-color: var(--magenta); }
+  input:checked + .slider:before { transform: translateX(18px); }
+
+  /* Input fields */
+  .input-field {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    color: var(--white);
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    resize: vertical;
+    min-height: 50px;
+    margin-top: 4px;
+    transition: border-color 0.2s;
+  }
+  .input-field:focus {
+    outline: none;
+    border-color: var(--magenta-light);
+  }
+
+  /* Actions buttons */
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 10px;
+  }
+  .action-btn:last-child { margin-bottom: 0; }
+  .btn-download {
+    background: linear-gradient(135deg, var(--magenta) 0%, var(--magenta-light) 100%);
+    color: var(--white);
+    box-shadow: 0 8px 20px rgba(236, 14, 111, 0.3);
+  }
+  .btn-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(236, 14, 111, 0.45);
+  }
+  .btn-print {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+  }
+  .btn-print:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+  }
+
+  /* Error Banner */
+  .err-banner {
+    display: none;
+    background: #450a0a;
+    border: 1px solid #b91c1c;
+    color: #fca5a5;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-top: 14px;
+    text-align: left;
+  }
+  .err-banner a { color: #fca5a5; text-decoration: underline; font-weight: 600; }
+
+  /* Flyer Container / Preview Area */
+  .flyer-preview-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* THE FLYER CARD - Exact 1:1 Aspect Ratio (Square) */
+  /* Target size is 720px. 720 * 1.5 = 1080px (Perfect export resolution) */
+  .flyer-card {
+    width: 720px;
+    height: 720px;
+    aspect-ratio: 1 / 1;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    color: var(--ink);
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  /* --- Flyer Card Themes --- */
+  /* 1. Midnight Obsidian (Brand) */
+  .flyer-card.theme-obsidian {
+    background: 
+      radial-gradient(400px 300px at 90% -10%, rgba(236, 14, 111, 0.35), transparent 70%),
+      radial-gradient(400px 300px at 10% 110%, rgba(122, 31, 134, 0.4), transparent 70%),
+      linear-gradient(160deg, #1d0720 0%, #350b39 60%, #150317 100%);
+    color: #ffffff;
+  }
+  .flyer-card.theme-obsidian .glass-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .flyer-card.theme-obsidian .text-hl { color: var(--magenta-light); }
+  .flyer-card.theme-obsidian .pill-badge { background: rgba(236, 14, 111, 0.2); border: 1px solid rgba(255, 77, 148, 0.4); color: #ffd1e4; }
+  .flyer-card.theme-obsidian .accent-text { color: var(--magenta-light); }
+  .flyer-card.theme-obsidian .flyer-footer { border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  .flyer-card.theme-obsidian .logo-span { color: #ffffff; }
+
+  /* 2. Electric Violet */
+  .flyer-card.theme-violet {
+    background: 
+      radial-gradient(400px 300px at 90% 10%, rgba(88, 28, 135, 0.6), transparent 70%),
+      radial-gradient(400px 300px at 10% 90%, rgba(124, 58, 237, 0.5), transparent 70%),
+      linear-gradient(150deg, #090514 0%, #1e1b4b 60%, #0d0a21 100%);
+    color: #ffffff;
+  }
+  .flyer-card.theme-violet .glass-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .flyer-card.theme-violet .text-hl { color: #a78bfa; }
+  .flyer-card.theme-violet .pill-badge { background: rgba(139, 92, 246, 0.25); border: 1px solid rgba(167, 139, 250, 0.4); color: #ddd6fe; }
+  .flyer-card.theme-violet .accent-text { color: #c084fc; }
+  .flyer-card.theme-violet .flyer-footer { border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  .flyer-card.theme-violet .logo-span { color: #ffffff; }
+
+  /* 3. Sunset Glow */
+  .flyer-card.theme-sunset {
+    background: 
+      radial-gradient(400px 400px at 80% 95%, rgba(253, 186, 116, 0.25), transparent 70%),
+      linear-gradient(135deg, #50072b 0%, #9d174d 40%, #db2777 80%, #f472b6 100%);
+    color: #ffffff;
+  }
+  .flyer-card.theme-sunset .glass-box {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .flyer-card.theme-sunset .text-hl { color: #fef08a; }
+  .flyer-card.theme-sunset .pill-badge { background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); color: #fff; }
+  .flyer-card.theme-sunset .accent-text { color: #fbcfe8; }
+  .flyer-card.theme-sunset .flyer-footer { border-top: 1px solid rgba(255, 255, 255, 0.15); }
+  .flyer-card.theme-sunset .logo-span { color: #ffffff; }
+
+  /* 4. Mint Forest */
+  .flyer-card.theme-mint {
+    background: 
+      radial-gradient(400px 300px at 90% -10%, rgba(16, 185, 129, 0.35), transparent 70%),
+      linear-gradient(160deg, #022c22 0%, #064e3b 50%, #022c22 100%);
+    color: #ffffff;
+  }
+  .flyer-card.theme-mint .glass-box {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .flyer-card.theme-mint .text-hl { color: #0cd18b; }
+  .flyer-card.theme-mint .pill-badge { background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(52, 211, 153, 0.4); color: #d1fae5; }
+  .flyer-card.theme-mint .accent-text { color: #34d399; }
+  .flyer-card.theme-mint .flyer-footer { border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  .flyer-card.theme-mint .logo-span { color: #ffffff; }
+
+  /* 5. Clean Print (Ink Saver) */
+  .flyer-card.theme-print {
+    background: #ffffff;
+    color: #111827;
+    border: 2px solid #e5e7eb;
+    box-shadow: none;
+  }
+  .flyer-card.theme-print .glass-box {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+  }
+  .flyer-card.theme-print .text-hl { color: #7e22ce; }
+  .flyer-card.theme-print .pill-badge { background: #f3e8ff; border: 1px solid #c084fc; color: #6b21a8; }
+  .flyer-card.theme-print .accent-text { color: #7e22ce; }
+  .flyer-card.theme-print .flyer-footer { border-top: 1px solid #e5e7eb; color: #4b5563; }
+  .flyer-card.theme-print .logo-span { color: #2d0530; }
+
+  /* TOP SECTION (Branding and Image Side-by-Side) */
+  .flyer-top-section {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .flyer-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .flyer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .flyer-logo-img {
+    height: 36px;
+    border-radius: 6px;
+  }
+  .logo-span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+  }
+
+  .flyer-hero {
+    text-align: left;
+  }
+  .flyer-hero .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: inline-block;
+  }
+  .flyer-hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+  }
+  .flyer-hero p.sub {
+    font-size: 0.82rem;
+    opacity: 0.9;
+    line-height: 1.4;
+  }
+
+  /* Right-side illustration container */
+  .image-container {
+    width: 100%;
+    height: 170px;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid var(--magenta);
+    box-shadow: 0 8px 20px rgba(236, 14, 111, 0.25);
+  }
+  .theme-print .image-container {
+    border-color: #e5e7eb;
+    box-shadow: none;
+  }
+  .flyer-illustration-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .glass-box {
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-top: 10px;
+  }
+
+  /* Curriculum Columns in Square layout */
+  .flyer-curriculum {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .curr-col {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+  }
+  .theme-print .curr-col {
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+  }
+  .curr-col .num {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 1;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    opacity: 0.12;
+  }
+  .curr-col h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .curr-col p {
+    font-size: 0.74rem;
+    line-height: 1.35;
+    opacity: 0.85;
+  }
+  /* Detailed list items inside curriculum */
+  .curr-details-list {
+    margin-top: 4px;
+    padding-top: 4px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.15);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .theme-print .curr-details-list {
+    border-top-color: #d1d5db;
+  }
+  .curr-details-list li {
+    font-size: 0.68rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    opacity: 0.9;
+  }
+  .curr-details-list li::before {
+    content: "•";
+    color: var(--magenta);
+    font-weight: 700;
+  }
+  .theme-print .curr-details-list li::before {
+    color: #7e22ce;
+  }
+
+  /* Safety commitments */
+  .safety-strip {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 6px 0;
+    border-top: 1px dashed rgba(255, 255, 255, 0.15);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+    margin-top: 10px;
+  }
+  .theme-print .safety-strip {
+    border-top-color: #d1d5db;
+    border-bottom-color: #d1d5db;
+  }
+  .safety-item {
+    font-size: 0.68rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .safety-item svg { width: 10px; height: 10px; color: var(--magenta-light); }
+  .theme-print .safety-item svg { color: #7e22ce; }
+
+  /* Registration/Contact Block */
+  .reg-block {
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    gap: 12px;
+    align-items: center;
+  }
+  .reg-info h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .reg-info p {
+    font-size: 0.72rem;
+    line-height: 1.3;
+    opacity: 0.85;
+    margin-bottom: 2px;
+  }
+  .reg-info p:last-child { margin-bottom: 0; }
+  
+  .qr-wrapper {
+    background: #ffffff;
+    padding: 4px;
+    border-radius: 8px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  /* QR Canvas element (drawn locally) */
+  .qr-canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+
+  /* Pricing band */
+  .flyer-pricing {
+    margin-top: 6px;
+    padding: 6px 10px;
+    background: rgba(236, 14, 111, 0.08);
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.74rem;
+    font-weight: 600;
+    border: 1px solid rgba(236, 14, 111, 0.15);
+  }
+  .theme-print .flyer-pricing {
+    background: #f3e8ff;
+    border-color: #d8b4fe;
+    color: #581c87;
+  }
+
+  /* Flyer Footer */
+  .flyer-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    font-size: 0.68rem;
+    opacity: 0.7;
+    margin-top: 12px;
+  }
+
+  /* Print Stylesheet */
+  @media print {
+    body {
+      background: #ffffff !important;
+      color: #000000 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    header.nav, .sidebar {
+      display: none !important;
+    }
+    .workspace {
+      display: block !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+    .flyer-preview-container {
+      display: block !important;
+      width: 100% !important;
+    }
+    .flyer-card {
+      border: none !important;
+      box-shadow: none !important;
+      padding: 30px !important;
+      width: 1080px !important;
+      height: 1080px !important;
+      max-width: 100% !important;
+      border-radius: 0 !important;
+      background: #ffffff !important;
+      color: #000000 !important;
+    }
+    /* Always apply Clean Print layout style for print */
+    .flyer-card.theme-obsidian, 
+    .flyer-card.theme-violet, 
+    .flyer-card.theme-sunset, 
+    .flyer-card.theme-mint {
+      background: #ffffff !important;
+      color: #111827 !important;
+    }
+    .flyer-card.theme-obsidian .glass-box,
+    .flyer-card.theme-violet .glass-box,
+    .flyer-card.theme-sunset .glass-box,
+    .flyer-card.theme-mint .glass-box {
+      background: #f9fafb !important;
+      border: 1px solid #e5e7eb !important;
+    }
+    .flyer-card.theme-obsidian .text-hl,
+    .flyer-card.theme-violet .text-hl,
+    .flyer-card.theme-sunset .text-hl,
+    .flyer-card.theme-mint .text-hl {
+      color: #7e22ce !important;
+    }
+    .flyer-card.theme-obsidian .pill-badge,
+    .flyer-card.theme-violet .pill-badge,
+    .flyer-card.theme-sunset .pill-badge,
+    .flyer-card.theme-mint .pill-badge {
+      background: #f3e8ff !important;
+      border: 1px solid #c084fc !important;
+      color: #6b21a8 !important;
+    }
+    .flyer-card.theme-obsidian .curr-col,
+    .flyer-card.theme-violet .curr-col,
+    .flyer-card.theme-sunset .curr-col,
+    .flyer-card.theme-mint .curr-col {
+      background: #fafafa !important;
+      border: 1px solid #e5e7eb !important;
+    }
+    .flyer-card.theme-obsidian .safety-item svg,
+    .flyer-card.theme-violet .safety-item svg,
+    .flyer-card.theme-sunset .safety-item svg,
+    .flyer-card.theme-mint .safety-item svg {
+      color: #7e22ce !important;
+    }
+    .flyer-card.theme-obsidian .logo-span,
+    .flyer-card.theme-violet .logo-span,
+    .flyer-card.theme-sunset .logo-span,
+    .flyer-card.theme-mint .logo-span {
+      color: #2d0530 !important;
+    }
+    .flyer-card.theme-obsidian .flyer-footer,
+    .flyer-card.theme-violet .flyer-footer,
+    .flyer-card.theme-sunset .flyer-footer,
+    .flyer-card.theme-mint .flyer-footer {
+      border-top: 1px solid #e5e7eb !important;
+      color: #4b5563 !important;
+    }
+    .flyer-card.theme-obsidian .flyer-pricing,
+    .flyer-card.theme-violet .flyer-pricing,
+    .flyer-card.theme-sunset .flyer-pricing,
+    .flyer-card.theme-mint .flyer-pricing {
+      background: #f3e8ff !important;
+      border-color: #d8b4fe !important;
+      color: #581c87 !important;
+    }
+    .flyer-card.theme-obsidian .image-container,
+    .flyer-card.theme-violet .image-container,
+    .flyer-card.theme-sunset .image-container,
+    .flyer-card.theme-mint .image-container {
+      border-color: #e5e7eb !important;
+      box-shadow: none !important;
+    }
+  }
+
+  /* Responsive screen scale down on medium/small viewports */
+  @media (max-width: 1140px) {
+    .flyer-preview-container {
+      zoom: 0.85;
+      -moz-transform: scale(0.85);
+      -moz-transform-origin: center center;
+    }
+  }
+  @media (max-width: 980px) {
+    .workspace {
+      grid-template-columns: 1fr;
+      padding: 16px;
+    }
+    .sidebar {
+      position: static;
+      top: 0;
+    }
+    .flyer-preview-container {
+      zoom: 1;
+      -moz-transform: scale(1);
+      padding: 16px 0;
+    }
+  }
+  @media (max-width: 760px) {
+    .flyer-preview-container {
+      zoom: 0.7;
+      -moz-transform: scale(0.7);
+    }
+  }
+  @media (max-width: 540px) {
+    .flyer-preview-container {
+      zoom: 0.5;
+      -moz-transform: scale(0.5);
+    }
+  }
+
+  /* Export Mode Styles */
+  body.export-mode {
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    min-height: auto !important;
+  }
+  body.export-mode header.nav, 
+  body.export-mode .sidebar {
+    display: none !important;
+  }
+  body.export-mode .workspace {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  body.export-mode .flyer-preview-container {
+    zoom: 1 !important;
+    transform: none !important;
+    display: block !important;
+    padding: 0 !important;
+  }
+  body.export-mode .flyer-card {
+    zoom: 1.5 !important; /* Scale to exactly 1080px by 1080px */
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="nextprep.html" class="logo" aria-label="NEXUS NextPrep Academy">
+      <img class="logo-img" src="assets/nexus-logo-purple.webp" alt="Nexus Intellect Limited" onerror="this.outerHTML='&lt;span class=&quot;brandmark&quot;&gt;NEXUS&lt;/span&gt;'" />
+      <span class="sub-solo">NextPrep Academy</span>
+    </a>
+    <a href="nextprep.html" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Website
+    </a>
+  </div>
+</header>
+
+<!-- ============ WORKSPACE ============ -->
+<div class="workspace">
+  
+  <!-- Control Sidebar -->
+  <aside class="sidebar">
+    <h2>Customize Flyer</h2>
+    
+    <!-- Theme Presets -->
+    <div class="control-group">
+      <label class="control-label">Flyer Theme Preset</label>
+      <div class="theme-grid">
+        <button type="button" class="theme-btn active" data-theme="obsidian">
+          <span class="theme-dot dot-obsidian"></span> Obsidian
+        </button>
+        <button type="button" class="theme-btn" data-theme="violet">
+          <span class="theme-dot dot-violet"></span> Violet
+        </button>
+        <button type="button" class="theme-btn" data-theme="sunset">
+          <span class="theme-dot dot-sunset"></span> Sunset
+        </button>
+        <button type="button" class="theme-btn" data-theme="mint">
+          <span class="theme-dot dot-mint"></span> Mint
+        </button>
+        <button type="button" class="theme-btn" style="grid-column: span 2;" data-theme="print">
+          <span class="theme-dot dot-print"></span> Clean Print (Ink-Saver)
+        </button>
+      </div>
+    </div>
+    
+    <!-- Content Toggles -->
+    <div class="control-group">
+      <label class="control-label">Content Toggles</label>
+      
+      <label class="toggle-item">
+        <span>Show Course Pricing</span>
+        <span class="switch">
+          <input type="checkbox" id="togglePricing" checked />
+          <span class="slider"></span>
+        </span>
+      </label>
+      
+      <label class="toggle-item">
+        <span>Show Curriculum Bullet-Points</span>
+        <span class="switch">
+          <input type="checkbox" id="toggleDetails" checked />
+          <span class="slider"></span>
+        </span>
+      </label>
+      
+      <label class="toggle-item">
+        <span>Show WhatsApp QR Code</span>
+        <span class="switch">
+          <input type="checkbox" id="toggleQR" checked />
+          <span class="slider"></span>
+        </span>
+      </label>
+    </div>
+
+    <!-- QR Link Builder -->
+    <div class="control-group" id="qrControlBlock">
+      <label class="control-label">WhatsApp Text Message</label>
+      <p style="font-size: 0.76rem; opacity: 0.7; margin-bottom: 6px;">Customize the message pre-filled when scanning the QR code.</p>
+      <textarea id="whatsappText" class="input-field" placeholder="E.g. Hi NextPrep Academy! I would like to reserve a seat for my teen in the Future Builders Holiday Bootcamp.">Hi NextPrep Academy! I'd like to reserve a seat for my teen in the Future Builders Holiday Bootcamp.</textarea>
+    </div>
+
+    <!-- Export Buttons -->
+    <div class="control-group" style="margin-bottom: 0; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+      <label class="control-label">Export Flyer</label>
+      <button type="button" class="action-btn btn-download" id="downloadPngBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download as Image (PNG)
+      </button>
+      <button type="button" class="action-btn btn-print" onclick="window.print()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Print Flyer / Save PDF
+      </button>
+      
+      <!-- Error Banner for local file testing -->
+      <div id="localErrorBanner" class="err-banner">
+        ⚠️ <strong>Local Browser Security Blocked Export</strong><br/>
+        Browsers restrict direct image downloads when files are opened directly via <code>file:///</code>. To save:<br/>
+        1. Use the <strong>"Print Flyer / Save PDF"</strong> button (works perfectly here!).<br/>
+        2. Or serve this folder from a local web server (e.g. Live Server or <code>npx http-server</code>).
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Interactive Flyer Frame -->
+  <main class="flyer-preview-container">
+    <div id="flyerCard" class="flyer-card theme-obsidian">
+      
+      <!-- TOP SECTION: Title and Illustration -->
+      <div class="flyer-top-section">
+        <div class="flyer-hero">
+          <div class="flyer-header">
+            <div class="flyer-logo">
+              <img class="flyer-logo-img" id="flyerLogo" src="assets/nexus-logo-white.webp" alt="Nexus Intellect Limited" onerror="this.outerHTML='&lt;span class=&quot;brandmark logo-span&quot;&gt;NEXUS&lt;/span&gt;'" />
+              <span class="logo-span">NextPrep Academy</span>
+            </div>
+          </div>
+          <span class="eyebrow text-hl">Summer Holiday Bootcamp &bull; Ages 13–17</span>
+          <h1>Give Your Teen a <span class="text-hl">Head Start</span> in AI &amp; Data</h1>
+          <p class="sub">Building high-income, practical skills schools don't teach. Led by vetted Nexus Instructors.</p>
+        </div>
+        
+        <div class="image-container">
+          <img class="flyer-illustration-img" src="assets/teen_coding_bootcamp.webp" alt="Teenager building project with AI and code" />
+        </div>
+      </div>
+
+      <!-- Curriculum Details Grid -->
+      <div class="flyer-curriculum">
+        <!-- AI Col -->
+        <div class="curr-col">
+          <span class="num">1</span>
+          <h3>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M16.24 16.24l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/><circle cx="12" cy="12" r="4"/></svg>
+            AI Fluency
+          </h3>
+          <p>Prompting, AI tools, and responsible ethics.</p>
+          <ul class="curr-details-list">
+            <li>Prompt engineering</li>
+            <li>AI writing & tools</li>
+            <li>Responsible AI ethics</li>
+          </ul>
+        </div>
+        <!-- Data Col -->
+        <div class="curr-col">
+          <span class="num">2</span>
+          <h3>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>
+            Data Science
+          </h3>
+          <p>Spreadsheet analytics, Dashboards, and Python.</p>
+          <ul class="curr-details-list">
+            <li>Spreadsheet mastery</li>
+            <li>Live analytics charts</li>
+            <li>First taste of Python</li>
+          </ul>
+        </div>
+        <!-- Pitch Col -->
+        <div class="curr-col">
+          <span class="num">3</span>
+          <h3>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Workplace Skills
+          </h3>
+          <p>Problem-solving, pitch design, and public speaking.</p>
+          <ul class="curr-details-list">
+            <li>Framing problems</li>
+            <li>Slide deck design</li>
+            <li>Grand Showcase Pitch</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Demo Day Showcase Highlight (Glassmorphic) -->
+      <div class="glass-box" style="margin-top: 14px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px;">
+          <div>
+            <span class="pill-badge" style="margin-bottom: 4px;">Grand Showcase</span>
+            <span style="font-size: 0.74rem; font-weight: 700; margin-left: 6px;" class="accent-text">Demo Day: Saturday 5 September</span>
+            <p style="font-size: 0.78rem; opacity: 0.9; margin-top: 2px;">Your teen presents their data-backed, AI-powered real project to parents and peers on stage.</p>
+          </div>
+          <div style="font-size: 1.8rem; flex-shrink: 0;">🏆</div>
+        </div>
+      </div>
+
+      <!-- Safety Commitments -->
+      <div class="safety-strip">
+        <span class="safety-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg>
+          Vetted Instructors
+        </span>
+        <span class="safety-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 19c0-3 2.5-5 6-5s6 2 6 5M15 19c0-2 .8-3.5 2-4.3"/></svg>
+          2 Adults Per Session
+        </span>
+        <span class="safety-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+          Live Online Class
+        </span>
+      </div>
+
+      <!-- Footer Call to Action Block -->
+      <div class="glass-box" style="margin-top: 14px; margin-bottom: 0;">
+        <div class="reg-block">
+          <div class="reg-info">
+            <h3>Reserve Your Teen's Seat Today</h3>
+            <p>📅 <strong>3 Aug – 5 Sep 2026</strong> &nbsp;|&nbsp; ⏰ <strong>Mon–Fri, 2h Daily</strong></p>
+            <p>Scan to register, or chat on WhatsApp at <strong>+234 816 691 7029</strong> or <strong>+44 730 702 5089</strong>.</p>
+            <div id="flyerPriceLabel" class="flyer-pricing">
+              Early Bird: ₦50,000 (ends 10 July) &nbsp;•&nbsp; Standard: ₦75,000
+            </div>
+          </div>
+          <div class="qr-wrapper" id="qrContainer">
+            <canvas class="qr-canvas" id="qrCodeCanvas"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flyer Footer Details -->
+      <div class="flyer-footer">
+        <span>www.nexusintellect.com/nextprep</span>
+        <span>NextPrep Academy &bull; Lagos, Nigeria &bull; Aspect Ratio 1:1</span>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+  // Parse theme/export parameters from URL
+  (function(){
+    var params = new URLSearchParams(window.location.search);
+    if(params.get("export") === "true") {
+      document.body.classList.add("export-mode");
+    }
+  })();
+
+  // Elements
+  var flyerCard = document.getElementById("flyerCard");
+  var flyerLogo = document.getElementById("flyerLogo");
+  var togglePricing = document.getElementById("togglePricing");
+  var toggleDetails = document.getElementById("toggleDetails");
+  var toggleQR = document.getElementById("toggleQR");
+  var whatsappText = document.getElementById("whatsappText");
+  var qrCodeCanvas = document.getElementById("qrCodeCanvas");
+  var qrContainer = document.getElementById("qrContainer");
+  var flyerPriceLabel = document.getElementById("flyerPriceLabel");
+  var qrControlBlock = document.getElementById("qrControlBlock");
+  var localErrorBanner = document.getElementById("localErrorBanner");
+
+  // Local QR Code Generator Instance
+  var qr = new QRious({
+    element: qrCodeCanvas,
+    size: 150,
+    background: '#ffffff',
+    foreground: '#1d0c20',
+    level: 'H'
+  });
+
+  // Initialize QR code value
+  function updateQRCode() {
+    var rawText = whatsappText.value.trim();
+    if(!rawText) {
+      rawText = "Hi NextPrep Academy! I'd like to reserve a seat for my teen in the Future Builders Holiday Bootcamp.";
+    }
+    var cleanEncoded = encodeURIComponent(rawText);
+    var waLink = "https://wa.me/2348166917029?text=" + cleanEncoded;
+    qr.value = waLink;
+  }
+
+  // Bind QR code update to text changes
+  whatsappText.addEventListener("input", updateQRCode);
+  // Run once on load
+  updateQRCode();
+
+  // Theme Preset Handler
+  var themeBtns = document.querySelectorAll(".theme-btn");
+  themeBtns.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      // Remove active from others
+      themeBtns.forEach(function(b) { b.classList.remove("active"); });
+      this.classList.add("active");
+
+      // Swap Theme Classes
+      var theme = this.getAttribute("data-theme");
+      flyerCard.className = "flyer-card theme-" + theme;
+
+      // Update logo colors based on theme
+      if(theme === "print") {
+        flyerLogo.src = "assets/nexus-logo-purple.webp";
+        qr.foreground = "#1d0c20"; // Dark foreground for printing
+      } else {
+        flyerLogo.src = "assets/nexus-logo-white.webp";
+        qr.foreground = "#1d0c20"; // standard dark QR code works best
+      }
+    });
+  });
+
+  // Toggle handlers
+  togglePricing.addEventListener("change", function() {
+    flyerPriceLabel.style.display = this.checked ? "block" : "none";
+  });
+
+  toggleDetails.addEventListener("change", function() {
+    var lists = document.querySelectorAll(".curr-details-list");
+    lists.forEach(function(list) {
+      list.style.display = this.checked ? "flex" : "none";
+    }, this);
+  });
+
+  toggleQR.addEventListener("change", function() {
+    qrContainer.style.display = this.checked ? "flex" : "none";
+    qrControlBlock.style.display = this.checked ? "block" : "none";
+    var gridBlock = document.querySelector(".reg-block");
+    if(this.checked) {
+      gridBlock.style.gridTemplateColumns = "1fr 80px";
+    } else {
+      gridBlock.style.gridTemplateColumns = "1fr";
+    }
+  });
+
+  // PNG Export Handler using html2canvas
+  document.getElementById("downloadPngBtn").addEventListener("click", function() {
+    var originalBtnText = this.innerHTML;
+    this.innerHTML = "Generating Image...";
+    this.disabled = true;
+    localErrorBanner.style.display = "none";
+
+    // Use html2canvas to capture the flyer card
+    // Flyer is 720px by 720px on page. Scale: 1.5 makes it exactly 1080px by 1080px!
+    html2canvas(flyerCard, {
+      scale: 1.5,
+      useCORS: true,
+      allowTaint: false, // Ensure taint is false so canvas data is readable
+      backgroundColor: null
+    }).then(function(canvas) {
+      try {
+        var image = canvas.toDataURL("image/png");
+        var link = document.createElement("a");
+        link.download = "nextprep-future-builders-flyer-1080x1080.png";
+        link.href = image;
+        link.click();
+
+        // Restore button
+        var btn = document.getElementById("downloadPngBtn");
+        btn.innerHTML = originalBtnText;
+        btn.disabled = false;
+      } catch (domException) {
+        // Fallback for file:// security blockages
+        console.error("DOM security exception: ", domException);
+        localErrorBanner.style.display = "block";
+        var btn = document.getElementById("downloadPngBtn");
+        btn.innerHTML = originalBtnText;
+        btn.disabled = false;
+      }
+    }).catch(function(err) {
+      console.error("html2canvas render error: ", err);
+      localErrorBanner.style.display = "block";
+      var btn = document.getElementById("downloadPngBtn");
+      btn.innerHTML = originalBtnText;
+      btn.disabled = false;
+    });
+  });
+
+  // Handle URL theme selection
+  (function(){
+    var params = new URLSearchParams(window.location.search);
+    var theme = params.get("theme");
+    if(theme) {
+      var btn = document.querySelector('.theme-btn[data-theme="' + theme + '"]');
+      if(btn) btn.click();
+    }
+  })();
+</script>
+
+</body>
+</html>

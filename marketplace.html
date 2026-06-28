@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus Expert Network | Private Beta</title>
+  <meta name="description" content="A private expert network for vetted business, academic, career, technology, and professional support engagements." />
+  <link rel="canonical" href="https://nexusintellects.com/marketplace.html" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta property="og:title" content="Nexus Expert Network | Private Beta" />
+  <meta property="og:description" content="A private expert network for vetted business, academic, career, technology, and professional support engagements." />
+  <meta property="og:url" content="https://nexusintellects.com/marketplace.html" />
+  <meta property="og:image" content="https://nexusintellects.com/assets/nexus-logo-purple.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/marketplace.css" />
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__logo" aria-label="Nexus Intellect Limited Home">
+      <img class="navbar__logo-img navbar__logo-img--white" src="assets/nexus-logo-white.webp" alt="Nexus Intellect Limited" />
+      <img class="navbar__logo-img navbar__logo-img--purple" src="assets/nexus-logo-purple.webp" alt="Nexus Intellect Limited" />
+      <div>
+        <div class="navbar__logo-text">Nexus Intellect Limited</div>
+      </div>
+    </a>
+
+    <div class="navbar__links" id="nav-links">
+      <a href="index.html" class="navbar__link">Home</a>
+      <a href="about.html" class="navbar__link">About</a>
+      <a href="business.html" class="navbar__link">Business Growth</a>
+      <a href="services.html" class="navbar__link">Services</a>
+      <a href="nextprep.html" class="navbar__link">NextPrep Academy</a>
+      <a href="contact.html" class="navbar__link">Contact</a>
+    </div>
+
+    <div class="navbar__actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      
+      <!-- User Menu (Hidden by default, shown when logged in) -->
+      <div class="user-menu" id="user-menu" style="display: none;">
+        <!-- Notification Bell -->
+        <div class="notif-trigger-wrapper">
+          <button class="notif-trigger-btn" id="notif-trigger" aria-label="Notifications">
+            🔔<span class="notif-badge" id="notif-badge" style="display: none;">0</span>
+          </button>
+          <!-- Notification Dropdown -->
+          <div class="notif-dropdown glass-card" id="notif-dropdown">
+            <div class="notif-dropdown__header">
+              <h3>Notifications</h3>
+              <button class="btn btn--link btn--sm" id="btn-mark-all-read" style="padding: 0; min-height: 0; font-size: 0.75rem;">Mark all read</button>
+            </div>
+            <div class="notif-dropdown__body" id="notif-dropdown-list">
+              <div class="notif-empty">No notifications</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- User Avatar Profile -->
+        <div class="user-avatar" id="navbar-user-avatar" title="User Profile">US</div>
+        <div class="user-info-dropdown">
+          <span class="user-info-name" id="navbar-user-name">User Name</span>
+          <span class="user-info-role" id="navbar-user-role">Role</span>
+        </div>
+        
+        <!-- Logout Button -->
+        <button class="btn btn--outline btn--sm" id="btn-logout">Logout</button>
+      </div>
+
+      <!-- Get Started Button (Shown only when logged out) -->
+      <a href="contact.html" class="btn btn--primary btn--sm" id="btn-get-started-nav">Get Started</a>
+      
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ PRIVATE BETA LANDING ============ -->
+<main id="marketplace-public" class="marketplace-public">
+  <section class="marketplace-landing">
+    <div class="container marketplace-landing__grid">
+      <div class="marketplace-landing__copy">
+        <div class="section-label">Private Expert Network</div>
+        <h1>Specialist delivery, managed before it reaches the open market.</h1>
+        <p>Nexus is preparing a vetted expert workspace for business strategy, brand development, research, career assets, and technical delivery. Until the full marketplace is production-ready, access is by private invitation and managed matching.</p>
+        <div class="marketplace-landing__actions">
+          <a href="contact.html" class="btn btn--primary btn--lg">Request Specialist Match</a>
+          <button type="button" class="btn btn--outline btn--lg" id="btn-marketplace-login">Member Login</button>
+        </div>
+        <p class="marketplace-landing__status" id="marketplace-gate-status">Private beta access only. Public self-service onboarding is currently closed.</p>
+      </div>
+
+      <div class="marketplace-landing__panel glass-card" aria-label="Nexus expert network overview">
+        <div class="marketplace-panel__header">
+          <img src="assets/nexus-logo-purple.webp" alt="Nexus Intellect Limited" />
+          <div>
+            <span>Curated Network</span>
+            <strong>Vetted delivery bench</strong>
+          </div>
+        </div>
+        <div class="marketplace-panel__list">
+          <div><span>01</span><strong>Business &amp; funding documents</strong><small>Plans, decks, feasibility, investor readiness.</small></div>
+          <div><span>02</span><strong>Brand and digital credibility</strong><small>Identity systems, websites, profiles, launch assets.</small></div>
+          <div><span>03</span><strong>Career, research, and mobility support</strong><small>Managed specialist matching for sensitive work.</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--compact">
+    <div class="container">
+      <div class="marketplace-proof-grid">
+        <div class="marketplace-proof-card">
+          <span>Current access model</span>
+          <strong>Concierge first</strong>
+          <p>Clients are matched manually so quality, scope, confidentiality, and payment handling stay controlled while the platform is refined.</p>
+        </div>
+        <div class="marketplace-proof-card">
+          <span>Who it serves</span>
+          <strong>Founders, professionals, students, teams</strong>
+          <p>The network supports high-stakes work where credibility, documentation quality, and expert delivery matter.</p>
+        </div>
+        <div class="marketplace-proof-card">
+          <span>Next platform milestone</span>
+          <strong>Authenticated workspace</strong>
+          <p>Approved members can sign in to the private workspace. Public registration and administrative tooling are not exposed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="marketplace-app-shell" hidden>
+
+<!-- ============ MARKETPLACE WORKSPACE ============ -->
+<section class="section section--compact">
+  <div class="container">
+    
+    <!-- Status & Mode Selector -->
+    <div class="marketplace-controls flex-between glass-card">
+      <div class="flex">
+        <div class="status-indicator" id="api-status">
+          <span class="status-dot status-dot--offline"></span>
+          <span class="status-text">Connecting to Server...</span>
+        </div>
+      </div>
+      
+      <!-- Role Switcher Toggle Buttons -->
+      <div class="role-selector">
+        <button class="role-btn active" id="btn-freelancer-mode">🧑‍💻 Freelancer Workspace</button>
+        <button class="role-btn" id="btn-client-mode">💼 Client Workspace</button>
+        <button class="role-btn" id="btn-escrow-mode" hidden aria-hidden="true">Escrow Agent Console</button>
+      </div>
+    </div>
+
+    <!-- Stats Dashboard Grid -->
+    <div class="m-stats-grid" id="stats-container">
+      <div class="m-stat-card glass-card">
+        <div class="m-stat-icon">📁</div>
+        <div>
+          <div class="m-stat-num" id="stat-active-gigs">0</div>
+          <div class="m-stat-label">Active Contracts</div>
+        </div>
+      </div>
+      <div class="m-stat-card glass-card">
+        <div class="m-stat-icon">💰</div>
+        <div>
+          <div class="m-stat-num" id="stat-earnings">₦0</div>
+          <div class="m-stat-label" id="label-stat-money">Earnings</div>
+        </div>
+      </div>
+      <div class="m-stat-card glass-card">
+        <div class="m-stat-icon">✉️</div>
+        <div>
+          <div class="m-stat-num" id="stat-proposals">0</div>
+          <div class="m-stat-label" id="label-stat-proposals">Proposals</div>
+        </div>
+      </div>
+      <div class="m-stat-card glass-card">
+        <div class="m-stat-icon">✅</div>
+        <div>
+          <div class="m-stat-num" id="stat-completed">0</div>
+          <div class="m-stat-label">Projects Completed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ MAIN WORKSPACE WRAPPER ============ -->
+    <div class="workspace-wrapper" style="margin-top: var(--sp-xl);">
+      
+      <!-- ============ FREELANCER WORKSPACE ============ -->
+      <div class="workspace-pane active" id="freelancer-pane">
+        <div class="tabs-nav glass-card">
+          <button class="tab-trigger active" data-target="free-find-jobs">🔍 Find Jobs</button>
+          <button class="tab-trigger" data-target="free-proposals">✉️ My Bids & Proposals</button>
+          <button class="tab-trigger" data-target="free-contracts">🤝 My Active Contracts</button>
+          <button class="tab-trigger" data-target="free-profile">👤 Profile Settings</button>
+        </div>
+
+        <!-- TAB: FIND JOBS -->
+        <div class="tab-pane active" id="free-find-jobs">
+          <div class="filter-bar glass-card">
+            <input type="text" id="search-input" class="search-input" placeholder="Search for jobs by title or skills..." />
+            <select id="category-filter" class="category-select">
+              <option value="">All Categories</option>
+              <option value="Academic Support">Academic Support</option>
+              <option value="Career Development">Career Development</option>
+              <option value="Business Services">Business Services</option>
+              <option value="Visa Documentation">Visa Documentation</option>
+              <option value="Skill Development">Skill Development</option>
+            </select>
+          </div>
+
+          <div class="listings-container" id="jobs-list">
+            <!-- Job listing cards dynamically injected -->
+          </div>
+        </div>
+
+        <!-- TAB: MY BIDS / PROPOSALS -->
+        <div class="tab-pane" id="free-proposals">
+          <div class="glass-card">
+            <h2>Submitted Applications</h2>
+            <p class="text-muted" style="margin-bottom: var(--sp-lg);">Track all proposals you have submitted to client job posts.</p>
+            <div class="table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Job Title</th>
+                    <th>Bid Amount</th>
+                    <th>Timeline</th>
+                    <th>Applied Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="proposals-list-body">
+                  <!-- Proposal rows dynamically injected -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: FREELANCER ACTIVE CONTRACTS -->
+        <div class="tab-pane" id="free-contracts">
+          <div class="contracts-container" id="freelancer-contracts-list">
+            <!-- Hired contracts dynamically injected -->
+          </div>
+        </div>
+
+        <!-- TAB: FREELANCER PROFILE -->
+        <div class="tab-pane" id="free-profile">
+          <div class="glass-card">
+            <h2>Edit Freelancer Profile</h2>
+            <p class="text-muted" style="margin-bottom: var(--sp-xl);">Update your details. These are submitted to clients when you bid on their projects.</p>
+            <form id="profile-form">
+              <div class="grid grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="profile-name">Full Name</label>
+                  <input type="text" id="profile-name" class="form-input" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="profile-title">Professional Title</label>
+                  <input type="text" id="profile-title" class="form-input" required />
+                </div>
+              </div>
+              <div class="grid grid-2" style="margin-top: var(--sp-md);">
+                <div class="form-group">
+                  <label class="form-label" for="profile-rate">Hourly Rate (₦/hr)</label>
+                  <input type="number" id="profile-rate" class="form-input" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="profile-portfolio">Portfolio / Github URL</label>
+                  <input type="url" id="profile-portfolio" class="form-input" placeholder="https://..." />
+                </div>
+              </div>
+              <div class="form-group" style="margin-top: var(--sp-md);">
+                <label class="form-label" for="profile-skills">Skills Tags (comma-separated)</label>
+                <input type="text" id="profile-skills" class="form-input" placeholder="e.g. Academic Writing, Python, Logo Design" />
+              </div>
+              <div class="form-group" style="margin-top: var(--sp-md);">
+                <label class="form-label" for="profile-bio">Professional Biography</label>
+                <textarea id="profile-bio" class="form-input form-textarea" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--lg" style="margin-top: var(--sp-lg);">
+                Save Profile
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ============ CLIENT WORKSPACE ============ -->
+      <div class="workspace-pane" id="client-pane">
+        <div class="tabs-nav glass-card">
+          <button class="tab-trigger active" data-target="client-my-jobs">📋 My Job Postings</button>
+          <button class="tab-trigger" data-target="client-post-job">➕ Post a Project</button>
+          <button class="tab-trigger" data-target="client-contracts">🤝 Active Contracts</button>
+        </div>
+
+        <!-- TAB: MY JOB POSTINGS -->
+        <div class="tab-pane active" id="client-my-jobs">
+          <div class="listings-container" id="client-jobs-list">
+            <!-- Client jobs list dynamically injected -->
+          </div>
+        </div>
+
+        <!-- TAB: POST A PROJECT -->
+        <div class="tab-pane" id="client-post-job">
+          <div class="glass-card">
+            <h2>Post a New Freelance Project</h2>
+            <p class="text-muted" style="margin-bottom: var(--sp-xl);">Describe the project to attract vetted professionals from the Nexus network.</p>
+            <form id="post-job-form">
+              <div class="grid grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="job-title">Project Title</label>
+                  <input type="text" id="job-title" class="form-input" placeholder="e.g. SPSS Statistical Analysis for Medical Dissertation" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="job-category">Category</label>
+                  <select id="job-category" class="form-input" style="cursor: pointer;" required>
+                    <option value="Academic Support">Academic Support</option>
+                    <option value="Career Development">Career Development</option>
+                    <option value="Business Services">Business Services</option>
+                    <option value="Visa Documentation">Visa Documentation</option>
+                    <option value="Skill Development">Skill Development</option>
+                  </select>
+                </div>
+              </div>
+              <div class="grid grid-3" style="margin-top: var(--sp-md);">
+                <div class="form-group">
+                  <label class="form-label" for="job-budget">Project Budget (₦)</label>
+                  <input type="number" id="job-budget" class="form-input" placeholder="e.g. 150000" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="job-deadline">Project Deadline</label>
+                  <input type="date" id="job-deadline" class="form-input" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="job-client">Your Company/Name</label>
+                  <input type="text" id="job-client" class="form-input" placeholder="e.g. Apex Consulting" required />
+                </div>
+              </div>
+              <div class="form-group" style="margin-top: var(--sp-md);">
+                <label class="form-label" for="job-skills">Required Skills (comma-separated)</label>
+                <input type="text" id="job-skills" class="form-input" placeholder="e.g. SPSS, Academic Writing, Excel Macros" required />
+              </div>
+              <div class="form-group" style="margin-top: var(--sp-md);">
+                <label class="form-label" for="job-desc">Detailed Project Requirements</label>
+                <textarea id="job-desc" class="form-input form-textarea" placeholder="Describe the scope, deliverables, and guidelines..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--lg" style="margin-top: var(--sp-lg);">
+                Publish Project Post
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- TAB: CLIENT ACTIVE CONTRACTS -->
+        <div class="tab-pane" id="client-contracts">
+          <div class="contracts-container" id="client-contracts-list">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ============ ESCROW AGENT WORKSPACE ============ -->
+      <div class="workspace-pane" id="escrow-agent-pane">
+        <div class="tabs-nav glass-card">
+          <button class="tab-trigger active" data-target="escrow-tickets">⚖️ Escrow Mediation Tickets</button>
+        </div>
+
+        <!-- TAB: MEDIATION TICKETS -->
+        <div class="tab-pane active" id="escrow-tickets">
+          <div class="glass-card">
+            <h2>Nexus Escrow Mediation Console</h2>
+            <p class="text-muted" style="margin-bottom: var(--sp-xl);">Vett and resolve dispute claims on the Nexus Freelance platform. Review statements and release/refund funds.</p>
+            <div class="table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Project</th>
+                    <th>Freelancer</th>
+                    <th>Client</th>
+                    <th>Budget</th>
+                    <th>Dispute Created</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="escrow-disputes-list-body">
+                  <!-- Disputes dynamically injected -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ MODALS & DRAWER DETAILS ============ -->
+
+<!-- JOB DETAIL / PROPOSAL SUBMISSION PANEL -->
+<div class="m-modal" id="job-detail-modal">
+  <div class="m-modal-overlay" id="close-detail-modal"></div>
+  <div class="m-modal-content glass-card">
+    <div class="m-modal-close" id="btn-close-detail">&times;</div>
+    <div id="job-modal-body">
+      <!-- Injected by JavaScript -->
+    </div>
+  </div>
+</div>
+
+<!-- BANK PAYMENT INVOICE MODAL -->
+<div class="m-modal" id="escrow-payment-modal">
+  <div class="m-modal-overlay" id="close-escrow-payment-modal"></div>
+  <div class="m-modal-content glass-card" style="max-width: 500px;">
+    <div class="m-modal-close" id="btn-close-escrow-payment">&times;</div>
+    <div class="invoice-box">
+      <div style="text-align: center; margin-bottom: var(--sp-md);">
+        <span style="font-size: 3rem;">🔐</span>
+        <h2 style="margin-top: var(--sp-xs);">Nexus Escrow Payment</h2>
+        <p class="text-muted" style="font-size: var(--fs-xs);">Fund the contract budget via secure bank transfer before work begins.</p>
+      </div>
+      <div class="invoice-details" style="background: rgba(188, 107, 204, 0.05); border: 1px solid var(--clr-border); padding: var(--sp-md) var(--sp-lg); border-radius: var(--radius-sm); margin-bottom: var(--sp-md);">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--fs-xs);">
+          <span class="text-muted">Account Name:</span>
+          <strong>Nexus Intellects Limited</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--fs-xs);">
+          <span class="text-muted">Bank Name:</span>
+          <strong>Zenith Bank PLC</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--fs-xs);">
+          <span class="text-muted">Account Number:</span>
+          <strong style="color: var(--magenta-light); font-size: 1.1rem; letter-spacing: 1px;">1018903524</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: var(--fs-xs);">
+          <span class="text-muted">Amount Due:</span>
+          <strong id="escrow-payment-amount" style="color: var(--clr-success); font-size: 1.1rem;">₦0</strong>
+        </div>
+      </div>
+      <form id="escrow-payment-form">
+        <input type="hidden" id="escrow-payment-prop-id" />
+        <div class="form-group" style="margin-bottom: var(--sp-md);">
+          <label class="form-label" for="escrow-payment-ref">Transaction Reference / Sender Name</label>
+          <input type="text" id="escrow-payment-ref" class="form-input" placeholder="e.g. Zenith Transfer Ref #99283 / John Davies" required />
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">I Have Made the Transfer</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- DISPUTE FILING MODAL -->
+<div class="m-modal" id="dispute-filing-modal">
+  <div class="m-modal-overlay" id="close-dispute-filing-modal"></div>
+  <div class="m-modal-content glass-card" style="max-width: 500px;">
+    <div class="m-modal-close" id="btn-close-dispute-filing">&times;</div>
+    <h3>⚠️ Initiate Escrow Dispute</h3>
+    <p class="text-muted" style="font-size: var(--fs-xs); margin-bottom: var(--sp-md);">If the client is unresponsive or refuses to release milestone funds, you can initiate a dispute. Nexus Escrow will freeze the funds and mediate.</p>
+    <form id="dispute-filing-form">
+      <input type="hidden" id="dispute-contract-id" />
+      <div class="form-group" style="margin-bottom: var(--sp-md);">
+        <label class="form-label" for="dispute-reason">Reason for Dispute / Deliverables Summary</label>
+        <textarea id="dispute-reason" class="form-input form-textarea" placeholder="Provide details on the work completed, links to deliverables, and the nature of the disagreement..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn--danger btn--lg" style="width: 100%; background: var(--clr-danger); border: none; height: 48px; line-height: 48px; padding: 0;">File Official Dispute</button>
+    </form>
+  </div>
+</div>
+
+<!-- DISPUTE RESPONSE MODAL -->
+<div class="m-modal" id="dispute-response-modal">
+  <div class="m-modal-overlay" id="close-dispute-response-modal"></div>
+  <div class="m-modal-content glass-card" style="max-width: 500px;">
+    <div class="m-modal-close" id="btn-close-dispute-response">&times;</div>
+    <h3>⚠️ Respond to Escrow Dispute</h3>
+    <p class="text-muted" style="font-size: var(--fs-xs); margin-bottom: var(--sp-md);">The freelancer has opened a dispute. Please provide your statement. Nexus Escrow Agent will mediate based on both statements.</p>
+    <div style="background: rgba(255, 74, 90, 0.05); border: 1px solid rgba(255, 74, 90, 0.15); padding: var(--sp-md); border-radius: var(--radius-sm); margin-bottom: var(--sp-md); font-size: var(--fs-xs);">
+      <strong>Freelancer's Argument:</strong>
+      <p id="dispute-reporter-reason" style="margin-top: 4px; font-style: italic; color: var(--clr-text-secondary);"></p>
+    </div>
+    <form id="dispute-response-form">
+      <input type="hidden" id="dispute-response-contract-id" />
+      <div class="form-group" style="margin-bottom: var(--sp-md);">
+        <label class="form-label" for="dispute-response-text">Your Statement / Response Details</label>
+        <textarea id="dispute-response-text" class="form-input form-textarea" placeholder="Explain your perspective, deliverables issues, or comments..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">Submit Official Response</button>
+    </form>
+  </div>
+</div>
+
+<!-- DISPUTE RESOLUTION MODAL -->
+<div class="m-modal" id="dispute-resolution-modal">
+  <div class="m-modal-overlay" id="close-dispute-resolution-modal"></div>
+  <div class="m-modal-content glass-card" style="max-width: 550px;">
+    <div class="m-modal-close" id="btn-close-dispute-resolution">&times;</div>
+    <h3>⚖️ Mediate Escrow Dispute</h3>
+    <p class="text-muted" style="font-size: var(--fs-xs); margin-bottom: var(--sp-md);">Review statements from both parties and choose a fair budget resolution.</p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-md); margin-bottom: var(--sp-md);">
+      <div style="background: rgba(188, 107, 204, 0.05); border: 1px solid var(--clr-border); padding: var(--sp-md); border-radius: var(--radius-sm); font-size: var(--fs-xs);">
+        <strong>Freelancer Claim:</strong>
+        <p id="res-freelancer-claim" style="margin-top: 4px; font-style: italic; color: var(--clr-text-secondary);"></p>
+      </div>
+      <div style="background: rgba(188, 107, 204, 0.05); border: 1px solid var(--clr-border); padding: var(--sp-md); border-radius: var(--radius-sm); font-size: var(--fs-xs);">
+        <strong>Client Response:</strong>
+        <p id="res-client-response" style="margin-top: 4px; font-style: italic; color: var(--clr-text-secondary);"></p>
+      </div>
+    </div>
+
+    <form id="dispute-resolution-form">
+      <input type="hidden" id="dispute-resolution-contract-id" />
+      <div class="form-group" style="margin-bottom: var(--sp-md);">
+        <label class="form-label" for="dispute-resolution-decision">Resolution Decision / Payout Rule</label>
+        <select id="dispute-resolution-decision" class="form-input" style="cursor: pointer;" required>
+          <option value="release">🟢 Payout: Release 100% Funds to Freelancer</option>
+          <option value="refund">🔴 Refund: Return 100% Funds to Client</option>
+          <option value="split">🟡 Split: Execute 50/50 Split Payout & Refund</option>
+        </select>
+      </div>
+      <div class="form-group" style="margin-bottom: var(--sp-md);">
+        <label class="form-label" for="dispute-resolution-notes">Mediation Statement & Findings</label>
+        <textarea id="dispute-resolution-notes" class="form-input form-textarea" placeholder="Explain the rationale behind this escrow resolution decision..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">Finalize Resolution Decision</button>
+    </form>
+  </div>
+</div>
+
+<!-- CHAT WORKSPACE SECTION (Renders inline once activated) -->
+<section class="section section--alt" id="chat-workspace-section" style="display: none;">
+  <div class="container">
+    <div class="workspace-grid">
+      <!-- Main Column: Chat Workspace -->
+      <div class="glass-card chat-wrapper">
+        <!-- Chat Header -->
+        <div class="chat-header">
+          <div>
+            <h2 id="chat-project-title">Project Workspace</h2>
+            <p class="text-muted" style="font-size: var(--fs-small);" id="chat-parties">Client: Victoria | Freelancer: Michael</p>
+          </div>
+          <button class="btn btn--outline btn--sm" id="btn-close-chat">Close Workspace</button>
+        </div>
+
+        <!-- Chat Feed Message Threads -->
+        <div class="chat-feed" id="chat-feed-box">
+          <!-- Message bubble cards injected dynamically -->
+        </div>
+
+        <!-- Workflow Action Panel (Submit Work / Review Work) -->
+        <div class="chat-workflow-panel" id="chat-workflow-actions">
+          <!-- submission forms & closure alerts injected dynamically -->
+        </div>
+
+        <!-- Chat Input Send Form -->
+        <form id="chat-input-form" class="chat-input-bar">
+          <input type="text" id="chat-message-field" class="chat-input" placeholder="Type a message to discuss project updates..." required />
+          <button type="submit" class="chat-send-btn">Send Message</button>
+        </form>
+      </div>
+      
+      <!-- Sidebar Column: Escrow & Milestones -->
+      <div class="glass-card escrow-sidebar" id="escrow-sidebar">
+        <div class="escrow-sidebar__header">
+          <h3>🔐 Escrow & Milestones</h3>
+          <p class="text-muted" style="font-size: 0.75rem; color: var(--clr-text-secondary); margin-top: 4px;">Budgets are securely locked in escrow and released upon milestone completion.</p>
+        </div>
+        <div class="escrow-sidebar__body">
+          <div class="escrow-summary">
+            <div class="escrow-summary-item">
+              <span class="label">Total Budget</span>
+              <span class="val" id="escrow-total-budget">₦0</span>
+            </div>
+            <div class="escrow-summary-item">
+              <span class="label">Locked in Escrow</span>
+              <span class="val text-warning" id="escrow-locked-amount" style="color: var(--clr-accent);">₦0</span>
+            </div>
+            <div class="escrow-summary-item">
+              <span class="label">Released to Date</span>
+              <span class="val text-success" id="escrow-released-amount" style="color: var(--clr-success);">₦0</span>
+            </div>
+          </div>
+          
+          <div class="milestones-section">
+            <h4>Milestones Checklist</h4>
+            <div class="milestones-list" id="milestones-list-container">
+              <!-- Milestones dynamically injected -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" class="navbar__logo" style="margin-bottom:0;" aria-label="Nexus Intellect Limited Home">
+          <img class="navbar__logo-img" src="assets/nexus-logo-white.webp" alt="Nexus Intellect Limited" style="height:50px;width:auto;border-radius:10px;" width="50" height="50" />
+          <div>
+            <div class="navbar__logo-text" style="color:#fff;">Nexus Intellect Limited</div>
+          </div>
+        </a>
+        <p class="footer__brand-desc">Empowering minds and building futures since 2018. Professional academic, career, and business support services.</p>
+      </div>
+      <div>
+        <h4 class="footer__col-title">Services</h4>
+        <div class="footer__links">
+          <a href="services.html" class="footer__link">Academic Support</a>
+          <a href="services.html" class="footer__link">Career Development</a>
+          <a href="business.html" class="footer__link">Business Growth & Funding</a>
+          <a href="services.html" class="footer__link">Visa Documentation</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer__col-title">Company</h4>
+        <div class="footer__links">
+          <a href="about.html" class="footer__link">About Us</a>
+          <a href="nextprep.html" class="footer__link">NextPrep Academy</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer__col-title">Get in Touch</h4>
+        <div class="footer__links">
+          <a href="mailto:info@nexusintellects.com" class="footer__link">info@nexusintellects.com</a>
+          <a href="tel:+2348166917029" class="footer__link">+234 816 691 7029</a>
+          <a href="tel:+447307025089" class="footer__link">+44 730 702 5089</a>
+          <span class="footer__link" style="cursor:default;">18/20, Love-All Street, Ikosi-Ketu, Lagos, Nigeria</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 Nexus Intellect Limited. All rights reserved.</span>
+      <div class="footer__socials">
+        <a href="https://wa.me/2348166917029" class="footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1s-.8 1-.9 1.2c-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.4.8-1.4.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.3A10 10 0 1 0 12 2z"/></svg>
+        </a>
+        <a href="mailto:info@nexusintellects.com" class="footer__social-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- ============ AUTH OVERLAY ============ -->
+<div class="auth-overlay" id="auth-overlay" style="display: none;">
+  <div class="auth-card glass-card">
+    <button type="button" class="auth-close-btn" id="btn-auth-close" aria-label="Close sign in">&times;</button>
+    <div class="auth-logo">
+      <img src="assets/nexus-logo-purple.webp" alt="Nexus Intellect Limited" />
+      <h2>NEXUS EXPERT NETWORK</h2>
+      <p>Private beta member access</p>
+    </div>
+
+    <div class="auth-tabs auth-tabs--single">
+      <button class="auth-tab-btn active" id="tab-login-btn">Sign In</button>
+      <button class="auth-tab-btn" id="tab-register-btn" hidden>Request Account</button>
+    </div>
+
+    <!-- Sign In Form -->
+    <form id="login-form" class="auth-form active">
+      <div class="form-group">
+        <label class="form-label" for="login-email">Email Address</label>
+        <input type="email" id="login-email" class="form-input" placeholder="you@example.com" autocomplete="email" required />
+      </div>
+      <div class="form-group" style="margin-top: var(--sp-md);">
+        <label class="form-label" for="login-password">Password</label>
+        <input type="password" id="login-password" class="form-input" placeholder="Password" autocomplete="current-password" required />
+      </div>
+      <button type="submit" class="btn btn--primary btn--lg" style="margin-top: var(--sp-lg); width: 100%;">
+        Sign In to Workspace
+      </button>
+      <div class="auth-help-text">
+        Access is issued privately by Nexus Intellect Limited. To join the beta, request a specialist match or contact the team.
+      </div>
+    </form>
+
+    <!-- Registration is intentionally hidden while public onboarding is closed. -->
+    <form id="register-form" class="auth-form" hidden>
+      <div class="form-group">
+        <label class="form-label" for="register-name">Full Name</label>
+        <input type="text" id="register-name" class="form-input" placeholder="Jane Doe" />
+      </div>
+      <div class="form-group" style="margin-top: var(--sp-md);">
+        <label class="form-label" for="register-email">Email Address</label>
+        <input type="email" id="register-email" class="form-input" placeholder="name@example.com" />
+      </div>
+      <div class="form-group" style="margin-top: var(--sp-md);">
+        <label class="form-label" for="register-password">Password</label>
+        <input type="password" id="register-password" class="form-input" placeholder="Minimum 8 characters" />
+      </div>
+      <div class="form-group" style="margin-top: var(--sp-md);">
+        <label class="form-label" for="register-role">Join As</label>
+        <select id="register-role" class="form-input" style="cursor: pointer;">
+          <option value="freelancer">Freelancer</option>
+          <option value="client">Client</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn--primary btn--lg" style="margin-top: var(--sp-lg); width: 100%;">
+        Request Account
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+<script src="js/marketplace.js"></script>
+</body>
+</html>
