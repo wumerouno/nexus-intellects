@@ -25,6 +25,7 @@ node_modules/
 dist/
 build/
 coverage/
+*.zip
 
 # OS/editor noise
 .DS_Store

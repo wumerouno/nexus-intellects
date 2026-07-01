@@ -31,6 +31,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://nexusintellects.com/blog.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nexusintellects.com/nigerian-website-pricing-lie.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://nexusintellects.com/nextprep.html</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
