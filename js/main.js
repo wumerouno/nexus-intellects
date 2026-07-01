@@ -227,13 +227,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const serviceLabels = {
-      academic: 'Academic Support',
+      academic: 'Researchub',
       career: 'Career Development',
       business: 'Business Services',
       visa: 'Visa Documentation',
-      skill: 'Skill Development',
+      skill: 'NextPrep Academy',
       freelance: 'Specialist Matching',
-      nextprep: 'NextPrep Academy',
+      nextprep: 'Future Builders Bootcamp',
       other: 'Other'
     };
 

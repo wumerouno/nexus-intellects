@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 1,
       title: "Academic Dissertation Editing & Formatting",
-      category: "Academic Support",
+      category: "Researchub",
       budget: 150000.00,
       description: "Need professional copy-editing, proofreading, and formatting check for a 120-page PhD thesis in international relations. Must follow Harvard referencing style. Vetted academics only.",
       deadline: "2026-07-15",
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 5,
       title: "Automated Sales Dashboard Setup in Excel",
-      category: "Skill Development",
+      category: "NextPrep Academy",
       budget: 60000.00,
       description: "Need an automated sales reporting spreadsheet with custom pivot charts, KPIs, and clean data processing macro for a retail company.",
       deadline: "2026-06-30",
