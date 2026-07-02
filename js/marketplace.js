@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 1,
       title: "Academic Dissertation Editing & Formatting",
-      category: "Researchub",
+      category: "Nexus WriteLab",
       budget: 150000.00,
       description: "Need professional copy-editing, proofreading, and formatting check for a 120-page PhD thesis in international relations. Must follow Harvard referencing style. Vetted academics only.",
       deadline: "2026-07-15",

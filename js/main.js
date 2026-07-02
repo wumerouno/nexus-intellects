@@ -171,12 +171,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- Testimonial Carousel ---------- */
-  const carousel = document.querySelector('[data-carousel]');
-
-  if (carousel) {
+  /* ---------- Carousels ---------- */
+  document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     const slides = carousel.querySelectorAll('[data-carousel-slide]');
     const dots = carousel.querySelectorAll('[data-carousel-dot]');
+    if (!slides.length) return;
+
     let currentIndex = 0;
     let autoplayTimer;
 
@@ -189,11 +189,14 @@ document.addEventListener('DOMContentLoaded', () => {
       dots.forEach((d) => d.classList.remove('active'));
 
       slides[currentIndex].classList.add('active');
+      dots.forEach((dot, i) => dot.setAttribute('aria-current', i === currentIndex ? 'true' : 'false'));
       if (dots[currentIndex]) dots[currentIndex].classList.add('active');
     }
 
     function startAutoplay() {
-      autoplayTimer = setInterval(() => goToSlide(currentIndex + 1), 5000);
+      if (slides.length < 2) return;
+      stopAutoplay();
+      autoplayTimer = setInterval(() => goToSlide(currentIndex + 1), 6000);
     }
 
     function stopAutoplay() {
@@ -210,16 +213,20 @@ document.addEventListener('DOMContentLoaded', () => {
       dot.addEventListener('click', () => { stopAutoplay(); goToSlide(i); startAutoplay(); });
     });
 
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+
     goToSlide(0);
     startAutoplay();
-  }
+  });
 
   /* ---------- Contact Form ---------- */
   const contactForm = document.getElementById('contact-form');
 
   if (contactForm) {
     const serviceSelect = contactForm.querySelector('#service');
-    const queryService = new URLSearchParams(window.location.search).get('service');
+    let queryService = new URLSearchParams(window.location.search).get('service');
+    if (queryService === 'academic') queryService = 'writelab';
 
     if (serviceSelect && queryService) {
       const matchingOption = Array.from(serviceSelect.options).find((option) => option.value === queryService);
@@ -227,12 +234,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const serviceLabels = {
-      academic: 'Researchub',
+      writelab: 'Nexus WriteLab',
+      academic: 'Nexus WriteLab',
       career: 'Career Development',
       business: 'Business Services',
       visa: 'Visa Documentation',
       skill: 'NextPrep Academy',
-      freelance: 'Specialist Matching',
       nextprep: 'Future Builders Bootcamp',
       other: 'Other'
     };
